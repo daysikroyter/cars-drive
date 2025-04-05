@@ -1,3 +1,10 @@
+var productSwiper = new Swiper(".product__swiper", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  effect: "fade",
+});
+
 function fixMobileVh() {
   const vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
@@ -11,7 +18,7 @@ const McBar1 = McButton.querySelector("b:nth-child(1)");
 const McBar2 = McButton.querySelector("b:nth-child(2)");
 const McBar3 = McButton.querySelector("b:nth-child(3)");
 const menu = document.querySelector(".menu__list");
-const menuBtn = document.querySelector('.menu__btn');
+const menuBtn = document.querySelector(".menu__btn");
 const body = document.querySelector("body");
 
 let isActive = false;
@@ -86,23 +93,4 @@ McButton.addEventListener("click", () => {
       });
     }, 800);
   }
-});
-
-const swiper = new Swiper(".hero__swiper", {
-  slidesPerView: 1,
-  effect: "fade",
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-});
-
-const productSlider = new Swiper(".product__swiper", {
-  direction: "vertical",
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
 });
